@@ -1,50 +1,20 @@
-<style>
-	h1, figure, p {
-		text-align: center;
-		margin: 0 auto;
-	}
-
-	h1 {
-		font-size: 2.8em;
-		text-transform: uppercase;
-		font-weight: 700;
-		margin: 0 0 0.5em 0;
-	}
-
-	figure {
-		margin: 0 0 1em 0;
-	}
-
-	img {
-		width: 100%;
-		max-width: 400px;
-		margin: 0 0 1em 0;
-	}
-
-	p {
-		margin: 1em auto;
-	}
-
-	@media (min-width: 480px) {
-		h1 {
-			font-size: 4em;
-		}
-	}
-</style>
-
 <script lang="typescript">
-    export let title: string = "CoTranslator";
+	import Heading from '../markdown/Heading.svelte';
+	export let title = "CoTranslator";
+	import { setContext } from 'svelte';
+
+	setContext('editable', true);
 </script>
 
 <svelte:head>
 	<title>{title}</title>
 </svelte:head>
 
-<h1>Great success!</h1>
+<main>
+	<p>Home page</p>
+	<Heading editable depth={1}>Testing Heading</Heading>
+</main>
 
-<figure>
-	<img alt='Success Kid' src='successkid.jpg'>
-	<figcaption>Have fun with Sapper!</figcaption>
-</figure>
+<style>
 
-<p><strong>Try editing this file (src/routes/index.svelte) to test live reloading.</strong></p>
+</style>

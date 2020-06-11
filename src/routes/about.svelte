@@ -1,7 +1,17 @@
+<script lang="typescript">
+	export let title: string = "CoTranslator - About";
+
+	
+</script>
+
 <svelte:head>
-	<title>About</title>
+	<title>{title}</title>
 </svelte:head>
 
-<h1>About this site</h1>
+<main>
+	About page
+</main>
 
-<p>This is the 'about' page. There's not much here.</p>
+<style>
+
+</style>

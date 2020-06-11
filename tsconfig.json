@@ -2,9 +2,14 @@
   "include": ["src/**/*"],
   "exclude": ["node_modules/*"],
   "compilerOptions": {
-      "target": "ESNext",
-      "module": "ESNext",
-      "types": ["svelte", "node", "@sapper"],
-      "typeRoots": ["typings"]
-  },
+    "target": "esnext",
+    "module": "esnext",
+    "types": ["svelte", "node", "@sapper"],
+    "rootDir": "./src",
+    "typeRoots": ["typings", "./node_modules/@types"],
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "isolatedModules": true,
+    "moduleResolution": "Node"
+  }
 }
